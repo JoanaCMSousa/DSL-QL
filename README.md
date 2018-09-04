@@ -1,13 +1,5 @@
 # Software Construction
-## Members
-- George Vletsas
-- Joana Sousa
-
-## Requirements
-The following prerequisite are needed to setup the project:
-
-1. ANTLR4
-
+Development of a Domain-Specific Language (DSL) for questionnaires, called QL, using Java, the Visitor design pattern and with an implementation of a parser by using a grammar-based parser generator
 
 ## Running
 To start the application run the Main.java class.
