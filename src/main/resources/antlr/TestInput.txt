@@ -1,0 +1,40 @@
+form taxOfficeExample {
+  "Did you sell a house in 2010?"
+    hasSoldHouse: boolean
+  "Did you buy a house in 2010?"
+    hasBoughtHouse: boolean
+  "Did you enter a loan?"
+    hasMaintLoan: boolean
+
+// this is a comment
+  if (hasSoldHouse) {
+    "What was the selling price?"
+      sellingPrice: money
+    "Private debts for the sold house:"
+      privateDebt: money
+    "Value residue:"
+      valueResidue: money =
+       (sellingPrice - privateDebt)
+    }
+
+    ifelse(hasBoughtHouse){
+        "How much did you pay for the house?"
+          payedPrice: money
+        "Is the new house in good conditions?"
+          inGoodConditions: boolean
+    }
+
+    else{
+        "Do you have a house?"
+        hasHouse: boolean
+    }
+
+    if(hasMaintLoan){
+        "You sure you entered a loan?"
+        sureEnteredLoan: boolean
+    }
+    else{
+        "You sure you did not enter a loan?"
+        sureItDidNotEnterLoan: boolean
+    }
+}
